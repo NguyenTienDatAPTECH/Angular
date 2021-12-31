@@ -1,0 +1,15 @@
+<h1>REGISTER</h1>
+<form>
+    <label>Name</label>
+    <input type="text" [(ngModel)]="fullname" placeholder="Full name" required/>
+    <br/>
+    <label>Password</label>
+    <input type="password" [(ngModel)]="password" placeholder="Password" required/>
+    <br/>
+    <label>Repassword</label>
+    <input type="password" [(ngModel)]="repassword" placeholder="Repassword" required/>
+    <br/>
+    <label>Email</label>
+    <input type="email" [(ngModel)]="fullemail" placeholder="Email" required/>
+  <button type="submit">Sign Up</button>
+</form>

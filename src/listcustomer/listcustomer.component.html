@@ -1,0 +1,59 @@
+<h1> Danh sách các khách hàng của TurtleLuis Shopping</h1>
+<div class="Form">
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="fullname" placeholder="Full Name" required/>
+  <br/>
+  <br/>
+  <label>Gender:</label>
+  <select [(ngModel)]="selectGender" name="Gender">
+    <option *ngFor="let select of gender">
+      {{select.sex}}
+    </option>
+  </select>
+  <br/>
+  <br/>
+  <label>Email:</label>
+  <input type="text" [(ngModel)]="fullemail" placeholder="Email" required/>
+  <br/>
+  <br/>
+  <label>Phone:</label>
+  <input type="text" [(ngModel)]="fullphone" placeholder="Phone Number">
+  <br/>
+  <br/>
+  <label>Address:</label>
+  <input type="text" [(ngModel)]="fulladdress" placeholder="Your Address">
+  <br/>
+  <br/>
+  <button (click)="click(); getSex(); resetGetSex()" type="submit">Add Customer</button>
+</div>
+<p>{{notification}}</p>
+<div class="List">
+  <div class="STT">
+    <h3>STT</h3>
+    <div *ngIf="created">
+      <p  *ngFor="let num of stt;let n of name; let i = index">{{i+1}}</p>
+    </div>
+  </div>
+  <div class="Customer">
+    <h3>Customer</h3>
+    <p *ngFor="let n of name">{{n}}</p>
+  </div>
+  <div class="Gender">
+    <h3>Gender</h3>
+    <div *ngIf="created">
+      <p class="Gen" *ngFor="let pg of addGender">{{pg}}</p>
+    </div>
+  </div>
+  <div class="Email">
+    <h3>Email</h3>
+    <p *ngFor="let e of email">{{e}}</p>
+  </div>
+  <div class="Phone">
+    <h3>Phone</h3>
+    <p *ngFor="let p of phone">{{p}}</p>
+  </div>
+  <div class="Address">
+    <h3>Address</h3>
+    <p *ngFor="let add of address">{{add}}</p>
+  </div>
+</div>

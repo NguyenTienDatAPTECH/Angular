@@ -1,0 +1,17 @@
+.background {
+  background-image: url("../../assets/images/z3065165952765_a96a9ad2bf0ce7c951b4ef4dbe60040b.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  box-sizing: border-box;
+}
+.register{
+
+  padding: 30px;
+  margin-top: 100px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+}
