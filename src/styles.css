@@ -1,0 +1,7 @@
+input.ng-invalid{
+  border: 1px solid red;
+}
+.form-group{
+  width: 50%;
+  display: compact;
+}

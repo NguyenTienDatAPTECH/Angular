@@ -1,0 +1,107 @@
+<form class="assign3" (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input
+        type="text"
+        id="firstname"
+        class="form-control"
+        ngModel
+        name="firstname"
+        required
+        firstname
+        #firstname = "ngModel"
+        />
+      <span *ngIf="!firstname.valid && firstname.touched" class="help-block">Please enter first name</span>
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input
+        type="text"
+        id="lastname"
+        class="form-control"
+        ngModel
+        name="lastname"
+        required
+        lastname
+        #lastname = "ngModel"
+        />
+      <span *ngIf="!lastname.valid && lastname.touched" class="help-block">Please enter last name</span>
+    </div>
+    <div class="form-group">
+      <label for="phonenumber">Phone number (in case of delivery question)</label>
+      <input
+        type="number"
+        id="phonenumber"
+        class="form-control"
+        ngModel
+        name="phonenumber"
+        required
+        phonenumber
+        #phonenumer = "ngModel"
+        />
+      <span *ngIf="!phonenumer.valid && phonenumer.touched" class="help-block">Please enter phone number</span>
+    </div>
+    <div class="form-group">
+      <label for="address">Stress Address</label>
+      <input
+        type="text"
+        id="address"
+        class="form-control"
+        ngModel
+        name="address"
+        required
+        address
+        #address = "ngModel"
+        />
+      <span *ngIf="!address.valid && address.touched" class="help-block">Please enter address stress</span>
+    </div>
+    <div class="form-group">
+      <label for="optional">Apt, suite, etc (optional)</label>
+      <input
+        type="text"
+        id="optional"
+        class="form-control"
+        ngModel
+        name="optional"
+        />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        type="text"
+        id="city"
+        class="form-control"
+        ngModel
+        name="city"
+        required
+        />
+    </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <select class="form-control" id="state" ngModel required>
+          <option value="Hanoi">Ha noi</option>
+          <option value="Saigon">Sai Gon</option>
+          <option value="Danang">Da Nang</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="zipcode">Zip code</label>
+        <input
+          type="number"
+          id="zipcode"
+          class="form-control"
+          ngModel
+          name="zipcode"
+          required
+          />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Set as my prefered address</label>
+      <input type="checkbox"/>
+    </div>
+    <div class="form-group">
+      <button [disabled]="f.valid" type="submit" class="btn btn-primary">Continue</button>
+    </div>
+</form>

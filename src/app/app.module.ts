@@ -10,6 +10,8 @@ import {demoforgotComponent} from "./demoforgot/demoforgot.component";
 import {demochangeComponent} from "./demochange/demochange.component";
 import {FormsModule} from "@angular/forms";
 import {getstartedComponent} from "./getstarted/getstarted.component";
+import {registerComponent} from "../regiter/register.component";
+import {assignment3Component} from "./assignment3/assignment3.component";
 
 const appRoutes: Routes = [
   {path : "", component: getstartedComponent},
@@ -20,12 +22,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    demoregisterComponent,
-    demologinComponent,
-    demoforgotComponent,
-    demochangeComponent,
-    getstartedComponent
-
+    assignment3Component,
+    registerComponent
   ],
   imports: [
     BrowserModule,
