@@ -1,0 +1,23 @@
+<div class="col-md-6">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+      <label>City</label>
+      <select ngModel name="city" class="form-control">
+        <option value="hanoi,vietnam">Ha Noi</option>
+        <option value="haiphong,vietnam">Hai Phong</option>
+        <option value="saigon,vietnam">Sai Gon</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="col-md-6">
+  <h1>{{weather.city}}, {{weather.country}}</h1>
+  <h2>{{weather.temp}}</h2>
+  <h3>{{weather.humidity}}</h3>
+  <h3>{{weather.pressure}}</h3>
+  <h3>{{weather.description}}</h3>
+
+</div>
