@@ -1,0 +1,22 @@
+<div  class="block_current-user">
+  <h2>Current user:Test test.com</h2>
+</div>
+<form (ngSubmit)="addImage()" #f="ngForm">
+  <div ngModelGroup="imageofuser" class="col-md-4">
+    <div class="form-group">
+      <span for="add_img"> Add img </span>
+      <input type="file" class="btn btn-primary" id="add_img" required ngModel="" name="add"/>
+    </div>
+    <div class="form-group">
+      <span for="name">Name of product</span>
+      <input type="text" class="form-control" placeholder="Name of product" id="name" name="name of product"  ngModel="" required/>
+    </div>
+    <div class="form-group">
+      <span for="price">Price of product</span>
+      <input type="number" name="price of product" class="form-control" placeholder="price of product" id="price" ngModel="" required/>
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

@@ -15,10 +15,12 @@ import {assignment3Component} from "./assignment3/assignment3.component";
 import {weatherComponent} from "./weather/weather.component";
 import {HttpClientModule} from "@angular/common/http";
 import {demoweatherComponent} from "./assignment4/demoweather.component";
+import {practicalComponent} from "./practical/practical.component";
+import {creatComponent} from "./practical/creat/creat.component";
 
 const appRoutes: Routes = [
-  {path : "", component: getstartedComponent},
-  {path : "demologin", component: demologinComponent},
+  {path : "", component: practicalComponent},
+  {path : "creat", component: creatComponent},
   {path: "demoregister", component: demoregisterComponent}
 ];
 
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
     assignment3Component,
     registerComponent,
     weatherComponent,
-    demoweatherComponent
+    demoweatherComponent,
+    practicalComponent,
+    creatComponent
   ],
   imports: [
     BrowserModule,
