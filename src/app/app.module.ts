@@ -12,6 +12,9 @@ import {FormsModule} from "@angular/forms";
 import {getstartedComponent} from "./getstarted/getstarted.component";
 import {registerComponent} from "../regiter/register.component";
 import {assignment3Component} from "./assignment3/assignment3.component";
+import {weatherComponent} from "./weather/weather.component";
+import {HttpClientModule} from "@angular/common/http";
+import {demoweatherComponent} from "./assignment4/demoweather.component";
 
 const appRoutes: Routes = [
   {path : "", component: getstartedComponent},
@@ -23,12 +26,15 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     assignment3Component,
-    registerComponent
+    registerComponent,
+    weatherComponent,
+    demoweatherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
